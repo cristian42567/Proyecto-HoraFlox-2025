@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="record">
+        <p>Historial de horas</p>
+    </div>
+    <div class="content">
+        <table>
+            <thead>
+                <tr>
+                    <th>Horas</th>
+                    <th>Fecha</th>
+                    <th>Descripción</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (hour of hours; track $index) {
+                <tr>
+                    <td>{{hour.hours}} {{ hour.hours === 1 ? 'Hora' : 'Horas' }}</td>
+                    <!--Lo hacemos para que si es sólo una hora se muestre en signular.-->
+                    <td>{{hour.date | date: 'dd/MM/yyyy'}}</td>
+                    <td>{{hour.description}}</td>
+                    <td><button (click)="clickOnEdit(hour)" class="edit">Editar</button>|
+                        <button (click)="showDeleteConfirmation(hour.id)" class="delete">Eliminar</button>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="interaction">
+        <div class="return-container">
+            <button [routerLink]="['/inicio']" class="return">Volver a inicio</button>
+        </div>
+        <div class="total-hours">
+            <p class="total">Número total de horas:</p>
+            <p class="number">{{ totalHours }}</p>
+        </div>
+    </div>
+</div>
+
+@if (editClicked) {
+<div class="container-edit">
+    <app-hours-form [editMode]="true" [hour]="hourToEdit" (closeEdit)="closeEditHandler()" />
+</div>
+}
+
+@if (deleteClicked) {
+<div class="container-edit-two">
+    <app-delete (confirmDelete)="confirmDelete()" (cancelDelete)="cancelDelete()" />
+</div>
+}

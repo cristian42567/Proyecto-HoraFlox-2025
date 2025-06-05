@@ -1,0 +1,209 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-top: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.record {
+    background-color: #ECEFCA;
+    padding: 5px 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    background-color: #ECEFCA;
+    margin-top: 25px;
+    border-radius: 15px;
+    padding: 10px 5px;
+    border-spacing: 30px 15px;
+    font-size: 1.1rem;
+    width: 100%;
+}
+
+table td {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table button {
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+.interaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.total-hours {
+    background-color: #ECEFCA;
+    border-radius: 15px;
+    display: flex;
+    gap: 20px;
+    padding: 0px 25px;
+}
+
+.total,
+.number {
+    background-color: #94B4C1;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+.return-container {
+    display: flex;
+    justify-content: end;
+}
+
+.return {
+    border: none;
+    background: none;
+    color: #ffffff;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.return:hover {
+    color: #cfcfcf;
+}
+
+.return:active {
+    transform: scale(0.99);
+}
+
+.edit:hover {
+    color: #547792;
+}
+
+.edit:active {
+    color: #213448;
+    transform: scale(0.95);
+}
+
+.delete {
+    color: #f84b4b;
+}
+
+.delete:hover {
+    color: #ff0000;
+}
+
+.delete:active {
+    color: #960000;
+    transform: scale(0.95);
+}
+
+/* Contenedor que se abre al darle al botón de editar. */
+.container-edit {
+    background-color: #213448;
+    position: fixed;
+    width: 100vw;
+    height: 120vh;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-180px);
+}
+
+/* Contenedor que se abre al darle al botón de eliminar. */
+.container-edit-two {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width: 100vw;
+    height: 120vh;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-180px);
+}
+
+/* Responsive para pantallas pequeñas, menores de 815px. */
+@media (max-width: 815px) {
+
+    .container {
+        width: 100%;
+        height: 800px;
+        display: flex;
+        align-items: center;
+    }
+
+    .top-bar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .record {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+    }
+
+    table {
+        background-color: #ECEFCA;
+        margin-top: 20px;
+        width: 80%;
+        padding: 0px;
+        border-spacing: 17px 15px;
+        font-size: 1rem;
+    }
+
+    .interaction {
+        display: flex;
+        flex-direction: column-reverse;
+        /*Uso este para que se vea 'volver a inicio' al final.*/
+    }
+
+    .total-hours {
+        width: 80%;
+    }
+
+    .return-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        width: 80%;
+    }
+
+    .container-edit {
+        width: 110vh;
+        height: 130vh;
+        margin-top: -45px;
+        transform: translateY(-80px);
+    }
+
+    .container-edit-two {
+        height: 150vh;
+    }
+
+}

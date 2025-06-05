@@ -1,0 +1,86 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 750px;
+    align-items: center;
+}
+
+.title {
+    background-color: #ECEFCA;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border-radius: 30px;
+}
+
+.text {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.description {
+    background-color: #94B4C1;
+    height: 150px;
+    width: 350px;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    border-radius: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+button {
+    background-color: #547792;
+    height: 150px;
+    width: 350px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 30px;
+    font-size: 1.4rem;
+    color: #ECEFCA;
+}
+
+button:hover {
+    background-color: #405f6d;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #3b4f58;
+    transform: scale(0.99);
+}
+
+/* Responsive para pantallas pequeñas, menores de 800px */
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .title, .description, button {
+        max-width: 280px;
+        height: 100px;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+}

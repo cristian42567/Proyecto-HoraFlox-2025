@@ -1,0 +1,121 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-top: 50px;
+}
+
+p {
+    font-weight: 600;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    background-color: #ECEFCA;
+    border-radius: 20px;
+    padding: 0px 100px;
+}
+
+main {
+    background-color: #ECEFCA;
+    margin-top: 15px;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+input {
+    border: none;
+    background-color: #94B4C1;
+    padding: 15px 50px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    width: 70%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.return {
+    border: none;
+    background: none;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.return:hover {
+    color: #cfcfcf;
+    cursor: pointer;
+}
+
+.return:active {
+    transform: scale(0.99);
+}
+
+.add {
+    border: none;
+    background-color: #94B4C1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 60px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.add:hover {
+    background-color: #405f6d;
+    color: #ECEFCA;
+    cursor: pointer;
+}
+
+.add:active {
+    background-color: #3b4f58;
+    transform: scale(0.98);
+}
+
+/*Si tenemos los botones deshabilitados hacemos que no funcione el hover.*/
+button:disabled,
+button[disabled] {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: default;
+}
+
+.error {
+    color: #bd0000;
+    font-size: 0.9rem;
+    margin-top: -10px;
+}
+
+/* Responsive para pantallas pequeñas, menores de 420px.*/
+@media (max-width: 420px) {
+
+    .container {
+        width: 95%;
+        font-size: 1rem;
+    }
+
+    header {
+        padding: 5px;
+        font-size: 1.1rem;
+    }
+
+    footer {
+        margin-bottom: 30px;
+    }
+
+    input {
+        width: 60%;
+    }
+
+}

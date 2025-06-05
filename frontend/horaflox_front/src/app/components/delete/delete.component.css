@@ -1,0 +1,38 @@
+:host {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    background-color: #ECEFCA;
+    padding: 30px 50px;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+button {
+    background-color: #94B4C1;
+    border: none;
+    font-size: 1.2rem;
+    padding: 10px 50px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #547792;
+}
+
+button:active {
+    transform: scale(0.97);
+    background-color: #3f5d70;
+}
